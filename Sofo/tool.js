@@ -67,7 +67,7 @@ function clearImage() {
 
 function drawImage() {
     const image = new Image();
-    image.src = '/Sofo/Assets/slogan.png';
+    image.src = '/Sofo/Assets/Sofo.png';
     image.onload = function () {
 
         // set image size
