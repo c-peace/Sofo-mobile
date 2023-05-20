@@ -62,16 +62,15 @@ nav {
     align-items: center;
 }
 
-canvas {
+.inCanvasBox {
     width: calc(100vw * 303 / 320);
     height: calc(100vw * 429 / 320);
-}
-
-.inCanvasBox {
     position: absolute;
 }
 
 #canvasFlag {
+    width: calc(100vw * 303 / 320);
+    height: calc(100vw * 429 / 320);
     z-index: 2;
 }
 
@@ -82,5 +81,7 @@ canvas {
 }
 
 #canvasSubmit {
+    width: calc(100vw * 303 / 320);
+    height: calc(100vw * 429 / 320);
     display: none;
 }
