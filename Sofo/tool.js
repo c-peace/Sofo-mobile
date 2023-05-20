@@ -41,6 +41,7 @@ function loadImage(event) {
     const file = event.target.files[0];
     const url = URL.createObjectURL(file);
     const image = new Image();
+    console.dir(file);
     image.src = url;
     image.onload = function () {
 
@@ -57,14 +58,12 @@ function loadImage(event) {
     };
 };
 
-imageInput.addEventListener('change', loadImage);
-
 function clearImage() {
-    ctx.save();
     ctx.fillStyle = "white";
     ctx.fillRect(0, 100, canvas.width, canvas.height)
-    ctx.restore();
 }
+
+imageInput.addEventListener('change', loadImage);
 
 
 function drawImage() {
