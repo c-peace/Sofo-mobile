@@ -57,6 +57,9 @@ nav {
     height: calc(100vw * 429 / 320);
     position: relative;
     background-color: transparent;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 canvas {

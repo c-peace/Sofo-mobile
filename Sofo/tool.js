@@ -19,7 +19,7 @@ function drawSongformArea() {
     ctx.fillText('SongForm', 90, 82);
     ctx.textAlign = 'center';
     ctx.font = 'bold 32px Arial';
-    ctx.fillStyle = "gray";
+    ctx.fillStyle = "lightgray";
     ctx.fillText('In - A - B - I - B - C - D - O', 672, 82);
     ctx.stroke();
     ctx.restore();
