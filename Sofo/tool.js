@@ -9,9 +9,9 @@ function drawSongformArea() {
     ctx.save();
     ctx.beginPath();
     ctx.strokeStyle = "#000000";
-    ctx.fillStyle = "pink";
+    ctx.fillStyle = "white";
     ctx.lineWidth = 3;
-    // ctx.fillRect(0, 0, 1190, 90);
+    ctx.fillRect(230, 0, 1190, 90);
     ctx.moveTo(90, 94);
     ctx.lineTo(1100, 94);
     ctx.fillStyle = "black";
@@ -21,6 +21,9 @@ function drawSongformArea() {
     ctx.font = 'bold 32px Arial';
     ctx.fillStyle = "lightgray";
     ctx.fillText('In - A - B - I - B - C - D - O', 672, 82);
+    ctx.font = 'italic bold 40px Times';
+    ctx.fillStyle = "#4D4D4D";
+    ctx.fillText('Choi Peace', 595, 1600);
     ctx.stroke();
     ctx.restore();
 }
@@ -56,6 +59,7 @@ function loadImage(event) {
 
         ctx.drawImage(image, (canvas.width - imageWidth) / 2, (100 + canvas.height - imageHeight) / 2, imageWidth, imageHeight);
     };
+    imageInput.disabled = true;
 };
 
 function clearImage() {
@@ -66,9 +70,9 @@ function clearImage() {
 imageInput.addEventListener('change', loadImage);
 
 
-function drawImage() {
+function drawGuide() {
     const image = new Image();
-    image.src = '/Sofo/Assets/Sofo.png';
+    image.src = '/Sofo/Assets/slogan.png';
     image.onload = function () {
 
         // set image size
@@ -80,9 +84,19 @@ function drawImage() {
             imageHeight = image.height * imageWidth / image.width;
         }
 
-        ctx.drawImage(image, (canvas.width - imageWidth/2) / 2, (100 + canvas.height - imageHeight/2) / 2, imageWidth/2, imageHeight/2);
+        ctx.drawImage(image, (canvas.width - imageWidth) / 2, (100 + canvas.height - imageHeight) / 2, imageWidth, imageHeight);
     };
 };
+drawGuide();
 
+// 모바일에서 터치 효과 주는 코드
+document.addEventListener("touchstart", function() {}, true);
 
-drawImage();
+// btn_pluse
+function goMenu() {
+    document.getElementById('modal_menu').style.display = 'block';
+}
+
+function back() {
+    document.getElementById('modal_menu').style.display = 'none';
+}

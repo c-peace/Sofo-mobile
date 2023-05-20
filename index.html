@@ -11,25 +11,33 @@
 </head>
 
 <body>
+    
+    <div id="modal_menu" onclick="back()">
+        <div id="nav_tool"></div>
+    </div>
+    
     <nav>
         <div id="nav_main">
             <h1 id="logo">Sofo</h1>
             <div id="btn_box">
-                <img id="btn_plus" src="Sofo/Assets/add.png">
+                <img id="btn_plus" src="Sofo/Assets/add.png" onclick="goMenu()">
                 <img id="btn_menu" src="Sofo/Assets/menu.png">
             </div>
         </div>
-        <div id="nav_tool"></div>
         <div id="nav_flag"></div>
     </nav>
 
-    <div id="canvas_box">
-        <canvas class="inCanvasBox" id="canvasFlag"></canvas>
-        <canvas class="inCanvasBox" id="canvasMain"></canvas>
-        <canvas class="inCanvasBox" id="canvasSubmit"></canvas>
+    <div id="workspace">
+        <div id="canvas_box">
+            <label for="upload" class="inCanvasBox" id="label">
+                <input type="file" accept="image/*" id="upload">
+            </label>
+            <canvas class="inCanvasBox" id="canvasFlag"></canvas>
+            <canvas class="inCanvasBox" id="canvasMain"></canvas>
+            <canvas class="inCanvasBox" id="canvasSubmit"></canvas>
+        </div>
     </div>
 
-    <input type="file" accept="image/*" id="upload">
     <script type="text/javascript" src="Sofo/tool.js"></script>
 </body>
 
