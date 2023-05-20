@@ -57,6 +57,8 @@ function loadImage(event) {
     };
 };
 
+imageInput.addEventListener('change', loadImage);
+
 function clearImage() {
     ctx.save();
     ctx.fillStyle = "white";
@@ -82,5 +84,6 @@ function drawImage() {
         ctx.drawImage(image, (canvas.width - imageWidth/2) / 2, (100 + canvas.height - imageHeight/2) / 2, imageWidth/2, imageHeight/2);
     };
 };
+
 
 drawImage();
