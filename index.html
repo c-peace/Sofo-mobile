@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link href="Sofo/Assets/Sofo.png" rel="shortcut icon" type="image/x-icon">
     <title>Sofo</title>
 </head>
+
 <body>
     <nav>
         <div id="nav_main">
@@ -20,10 +22,14 @@
         <div id="nav_tool"></div>
         <div id="nav_flag"></div>
     </nav>
-    <canvas id="canvasMain"></canvas>
-    <input type="file" accept="image/*" id="upload">
 
+    <div id="canvas_box">
+        <canvas class="inCanvasBox" id="canvasFlag"></canvas>
+        <canvas class="inCanvasBox" id="canvasMain"></canvas>
+        <canvas class="inCanvasBox" id="canvasSubmit"></canvas>
+    </div>
 
     <script type="text/javascript" src="Sofo/tool.js"></script>
 </body>
+
 </html>

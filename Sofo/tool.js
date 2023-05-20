@@ -26,6 +26,7 @@ function drawSongformArea() {
 }
 drawSongformArea();
 
+
 function drawRoutine() {
     ctx.textAlign = 'center';
     ctx.font = 'bold 32px Arial';
@@ -63,4 +64,23 @@ function clearImage() {
     ctx.restore();
 }
 
-imageInput.addEventListener('change', loadImage);
+
+function drawImage() {
+    const image = new Image();
+    image.src = '/Sofo/Assets/slogan.png';
+    image.onload = function () {
+
+        // set image size
+        let imageHeight = (canvas.height - 100) * 95 / 100;
+        let imageWidth = image.width * imageHeight / image.height;
+
+        if (imageWidth > canvas.width * 95 / 100) {
+            imageWidth = canvas.width * 95 / 100;
+            imageHeight = image.height * imageWidth / image.width;
+        }
+
+        ctx.drawImage(image, (canvas.width - imageWidth/2) / 2, (100 + canvas.height - imageHeight/2) / 2, imageWidth/2, imageHeight/2);
+    };
+};
+
+drawImage();

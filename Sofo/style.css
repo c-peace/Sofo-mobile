@@ -13,12 +13,13 @@
 }
 
 body {
+    background-color: var(--color-background);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: var(--color-background);
 }
 
+/* nav */
 nav {
     width: 100vw;
     height: 56px;
@@ -49,9 +50,34 @@ nav {
     height: 40px;
 }
 
+
+/* canvas */
+#canvas_box {
+    width: calc(100vw * 303 / 320);
+    height: calc(100vw * 429 / 320);
+    position: relative;
+    background-color: transparent;
+}
+
 canvas {
     width: calc(100vw * 303 / 320);
     height: calc(100vw * 429 / 320);
-    box-shadow: 0px 4px 4px #9b9b9b;
+}
+
+.inCanvasBox {
+    position: absolute;
+}
+
+#canvasFlag {
+    z-index: 2;
+}
+
+#canvasMain {
     background-color: var(--color-musicsheet);
+    box-shadow: 0px 4px 4px #9b9b9b;
+    z-index: 1;
+}
+
+#canvasSubmit {
+    display: none;
 }
