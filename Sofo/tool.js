@@ -1,3 +1,14 @@
+// when touch, 진동!
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate; 
+
+function vibrate() {
+if (navigator.vibrate) {
+navigator.vibrate(20000);  // 진동을 울리게 한다. 1000ms = 1초 
+} 
+}
+
+
+
 const canvas = document.querySelector('#canvasMain');
 const ctx = canvas.getContext('2d');
 canvas.width = 1190;
@@ -90,16 +101,18 @@ function drawGuide() {
 drawGuide();
 
 // 모바일에서 터치 효과 주는 코드
-document.addEventListener("touchstart", function() {}, true);
+// document.addEventListener("touchstart", function() {}, true);
 
 // btn_plus
 function goFlag() {
+    vibrate()
     back();
     document.getElementById('modal_plus').style.display = 'block';
 }
 
 // btn_menu
 function goMenu() {
+    vibrate()
     back();
     document.getElementById('modal_menu').style.display = 'block';
 }
