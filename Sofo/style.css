@@ -7,6 +7,7 @@
     --color-brown: #EFD7C2;
     --color-background: #EEEEEE;
     --color-uploadimage: #628FE7;
+    --color-title: #FFC24D;
 }
 
 * {
@@ -21,14 +22,74 @@ body {
 }
 
 /* menu modal */
-#modal_menu {
+.modal {
+    box-sizing: border-box;
+    padding-top: 56px;
+    backdrop-filter: blur(4px);
     position: absolute;
     width: 100%;
     height: 100%;
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
     z-index: 4;
+}
+
+#body_modalPlus {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#body_modalPlus p {
+    color: var(--color-musicsheet);
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#btnFlag_box {
+    width: 299px;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#btnFlag_box div {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-brown);
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#menu_box {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20%;
+    align-items: center;
+}
+
+#menu_box h1 {
+    color: var(--color-title);
+    font-size: 60px;
+    margin-bottom: 16px;
+}
+
+#menu_box h2 {
+    color: var(--color-musicsheet);
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 /* nav */

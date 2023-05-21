@@ -92,11 +92,19 @@ drawGuide();
 // 모바일에서 터치 효과 주는 코드
 document.addEventListener("touchstart", function() {}, true);
 
-// btn_pluse
+// btn_plus
+function goFlag() {
+    back();
+    document.getElementById('modal_plus').style.display = 'block';
+}
+
+// btn_menu
 function goMenu() {
+    back();
     document.getElementById('modal_menu').style.display = 'block';
 }
 
 function back() {
     document.getElementById('modal_menu').style.display = 'none';
+    document.getElementById('modal_plus').style.display = 'none';
 }

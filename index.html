@@ -11,17 +11,45 @@
 </head>
 
 <body>
-    
-    <div id="modal_menu" onclick="back()">
-        <div id="nav_tool"></div>
+
+    <div class="modal" id="modal_plus" onclick="back()">
+        <div id="body_modalPlus">
+            <p>원하는 Flag를 클릭하여 악보에 위치시키세요!</p>
+            <div id="btnFlag_box">
+                <div><span style="font-size: 30px;">A</span>
+                    verse</div>
+                <div><span style="font-size: 30px;">In</span>
+                    Intro</div>
+                <div><span style="font-size: 30px;">B</span>
+                    Prechorus</div>
+                <div><span style="font-size: 30px;">I</span>
+                    Interlude</div>
+                <div><span style="font-size: 30px;">C</span>
+                    Chorus</div>
+                <div><span style="font-size: 30px;">O</span>
+                    Outro</div>
+                <div><span style="font-size: 30px;">D</span>
+                    Bridge</div>
+                <div>Reset</div>
+            </div>
+        </div>
     </div>
-    
+    <div class="modal" id="modal_menu" onclick="back()">
+        <div id="menu_box">
+            <h1>MENU</h1>
+            <h2>View</h2>
+            <h2>Save</h2>
+            <h2>Reset</h2>
+            <h2>Guide</h2>
+        </div>
+    </div>
+
     <nav>
         <div id="nav_main">
             <h1 id="logo">Sofo</h1>
             <div id="btn_box">
-                <img id="btn_plus" src="Sofo/Assets/add.png" onclick="goMenu()">
-                <img id="btn_menu" src="Sofo/Assets/menu.png">
+                <img id="btn_plus" src="Sofo/Assets/add.png" onclick="goFlag()">
+                <img id="btn_menu" src="Sofo/Assets/menu.png" onclick="goMenu()">
             </div>
         </div>
         <div id="nav_flag"></div>
