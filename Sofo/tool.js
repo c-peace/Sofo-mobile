@@ -2,9 +2,9 @@
 navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate; 
 
 function vibrate() {
-if (navigator.vibrate) {
-navigator.vibrate(1000);  // 진동을 울리게 한다. 1000ms = 1초 
-} 
+    if (navigator.vibrate) {
+        navigator.vibrate(1000);  // 진동을 울리게 한다. 1000ms = 1초 
+    }
 }
 
 
