@@ -114,8 +114,8 @@ body {
 }
 
 #label_songform {
-    width: 70%;
-    height: 30px;
+    width: 80%;
+    height: 24px;
     margin-bottom: 30px;
     border-bottom: 1px solid white;
     position: relative;
@@ -123,15 +123,15 @@ body {
 
 #back_songform {
     position: absolute;
-    top: 0;
-    right: -46px;
+    bottom: -30px;
+    right: 0px;
     color: white;
 }
 
 #ip_songformArea {
     text-align: center;
     color: white;
-
+    font-size: 14px;
 }
 
 #btnSongform_box {
@@ -154,6 +154,10 @@ body {
     align-items: center;
     text-align: center;
     transition: all 100ms;
+}
+
+#btnSongform_box div:hover {
+    transform: scale(96%);
 }
 
 /* nav */
@@ -206,6 +210,7 @@ nav {
     flex-flow: column nowrap;
     align-items: center;
     margin-top: 20px;
+    touch-action: none;
 }
 
 /* canvas */
