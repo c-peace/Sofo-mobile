@@ -26,6 +26,7 @@ body {
     box-sizing: border-box;
     padding-top: 56px;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,16 +51,16 @@ body {
 }
 
 #btnFlag_box {
-    width: 299px;
-    height: 500px;
+    width: 320px;
+    height: 600px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
 #btnFlag_box div {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: var(--color-brown);
     border-radius: 20px;
     font-weight: bold;
