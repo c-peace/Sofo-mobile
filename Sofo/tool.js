@@ -100,8 +100,21 @@ function drawGuide() {
 };
 drawGuide();
 
-// 모바일에서 터치 효과 주는 코드
-document.addEventListener("touchstart", function() {}, true);
+document.documentElement.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+         event.preventDefault(); 
+       } 
+   }, false);
+
+let lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+         event.preventDefault(); 
+       } lastTouchEnd = now; 
+   }, false);
+   
 
 // btn_plus
 function goFlag() {
