@@ -121,16 +121,15 @@ body {
     position: relative;
 }
 
-#label_songform div {
+#back_songform {
     position: absolute;
     top: 0;
     right: -46px;
     color: white;
 }
 
-#label_songform h1 {
+#ip_songformArea {
     text-align: center;
-    font-size: 18px;
     color: white;
 
 }

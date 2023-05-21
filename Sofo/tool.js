@@ -96,7 +96,6 @@ document.documentElement.addEventListener('touchstart', function (event) {
    }, false);
 
 let lastTouchEnd = 0; 
-
 document.documentElement.addEventListener('touchend', function (event) {
     const now = (new Date()).getTime();
     if (now - lastTouchEnd <= 300) {
