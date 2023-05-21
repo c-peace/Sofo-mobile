@@ -3,7 +3,7 @@ navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mo
 
 function vibrate() {
 if (navigator.vibrate) {
-navigator.vibrate(20000);  // 진동을 울리게 한다. 1000ms = 1초 
+navigator.vibrate(1000);  // 진동을 울리게 한다. 1000ms = 1초 
 } 
 }
 
@@ -101,7 +101,7 @@ function drawGuide() {
 drawGuide();
 
 // 모바일에서 터치 효과 주는 코드
-// document.addEventListener("touchstart", function() {}, true);
+document.addEventListener("touchstart", function() {}, true);
 
 // btn_plus
 function goFlag() {
