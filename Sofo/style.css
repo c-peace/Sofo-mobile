@@ -15,11 +15,11 @@ html {
     -webkit-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    touch-action: none;
 }
 
 * {
     margin: 0;
-    touch-action: none;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     height: 100%;
 }
 
-/* menu modal */
+/* modal */
 .modal {
     box-sizing: border-box;
     padding-top: 56px;
@@ -39,9 +39,10 @@ body {
     height: 100%;
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 4;
+    z-index: 5;
 }
 
+/* plus */
 #body_modalPlus {
     width: 100%;
     height: 100%;
@@ -83,7 +84,7 @@ body {
     transform: scale(96%);
 }
 
-
+/* menu */
 #menu_box {
     width: 100%;
     height: 80%;
@@ -103,6 +104,64 @@ body {
     color: var(--color-musicsheet);
     font-size: 40px;
     margin-bottom: 10px;
+}
+
+/* songform */
+#body_modalSongform {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#label_songform {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+#label_songform div {
+    position: absolute;
+    top: 0;
+    right: -46px;
+    color: white;
+}
+
+#label_songform h1 {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+
+}
+
+#btnSongform_box {
+    width: 300px;
+    height: 540px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#btnSongform_box div {
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-brown);
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 100ms;
+}
+
+#btnSongform_box div:hover {
+    transform: scale(96%);
 }
 
 /* nav */
@@ -198,4 +257,14 @@ input {
 
 #label {
     z-index: 3;
+}
+
+#btn_songform {
+    width: calc(100vw * 303 / 320 * 1010 / 1190);
+    height: calc(100vw * 429 / 320 * 120 / 1684);
+    z-index: 4;
+}
+
+#btn_songform:hover {
+    background-color: #4d4d4d50;
 }

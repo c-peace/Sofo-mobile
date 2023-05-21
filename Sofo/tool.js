@@ -1,14 +1,3 @@
-// when touch, 진동!
-navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate; 
-
-function vibrate() {
-    if (navigator.vibrate) {
-        navigator.vibrate(1000);  // 진동을 울리게 한다. 1000ms = 1초 
-    }
-}
-
-
-
 const canvas = document.querySelector('#canvasMain');
 const ctx = canvas.getContext('2d');
 canvas.width = 1190;
@@ -83,7 +72,7 @@ imageInput.addEventListener('change', loadImage);
 
 function drawGuide() {
     const image = new Image();
-    image.src = '/Sofo/Assets/slogan.png';
+    image.src = '/Sofo/Assets/Sofo.png';
     image.onload = function () {
 
         // set image size
@@ -95,7 +84,7 @@ function drawGuide() {
             imageHeight = image.height * imageWidth / image.width;
         }
 
-        ctx.drawImage(image, (canvas.width - imageWidth) / 2, (100 + canvas.height - imageHeight) / 2, imageWidth, imageHeight);
+        ctx.drawImage(image, (canvas.width - imageWidth/2) / 2, (100 + canvas.height - imageHeight/2) / 2, imageWidth/2, imageHeight/2);
     };
 };
 drawGuide();
@@ -118,21 +107,26 @@ document.documentElement.addEventListener('touchend', function (event) {
 
 // btn_plus
 function goFlag() {
-    vibrate()
     back();
     document.getElementById('modal_plus').style.display = 'block';
 }
 
 // btn_menu
 function goMenu() {
-    vibrate()
     back();
     document.getElementById('modal_menu').style.display = 'block';
+}
+
+// btn_songform
+function goSongform() {
+    back();
+    document.getElementById('modal_songform').style.display = 'block';
 }
 
 function back() {
     document.getElementById('modal_menu').style.display = 'none';
     document.getElementById('modal_plus').style.display = 'none';
+    document.getElementById('modal_songform').style.display = 'none';
 }
 
 

@@ -34,6 +34,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal" id="modal_menu" onclick="back()">
         <div id="menu_box">
             <h1>MENU</h1>
@@ -41,6 +42,33 @@
             <h2>Save</h2>
             <h2>Reset</h2>
             <h2 onclick="btn_feedback()">Feedback</h2>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_songform">
+        <div id="body_modalSongform">
+            <label for="ip_songform" id="label_songform">
+                <h1>In - A - B - I - B - C - D - O</h1>
+                <div onclick="back()">done</div>
+                <input type="text" id="ip_songform">
+            </label>
+            <div id="btnSongform_box">
+                <div><span style="font-size: 30px;">A</span>
+                    verse</div>
+                <div><span style="font-size: 30px;">In</span>
+                    Intro</div>
+                <div><span style="font-size: 30px;">B</span>
+                    Prechorus</div>
+                <div><span style="font-size: 30px;">I</span>
+                    Interlude</div>
+                <div><span style="font-size: 30px;">C</span>
+                    Chorus</div>
+                <div><span style="font-size: 30px;">O</span>
+                    Outro</div>
+                <div><span style="font-size: 30px;">D</span>
+                    Bridge</div>
+                    <div><span style="font-size: 30px;">Reset</span></div>
+            </div>
         </div>
     </div>
 
@@ -57,6 +85,7 @@
 
     <div id="workspace">
         <div id="canvas_box">
+            <div class="inCanvasBox" id="btn_songform" onclick="goSongform()"></div>
             <label for="upload" class="inCanvasBox" id="label">
                 <input type="file" accept="image/*" id="upload">
             </label>
