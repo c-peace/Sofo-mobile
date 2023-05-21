@@ -121,3 +121,8 @@ function back() {
     document.getElementById('modal_menu').style.display = 'none';
     document.getElementById('modal_plus').style.display = 'none';
 }
+
+
+function btn_feedback() {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSegiRFCoM7ZomJR2cIKwV1h_4cxyggZgjNm6Y59r9K8qtfl5A/viewform?usp=sf_link');
+}
